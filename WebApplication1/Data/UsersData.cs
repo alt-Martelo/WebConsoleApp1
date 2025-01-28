@@ -63,13 +63,13 @@ namespace WebApplication1.Data
         {
             using (SqlConnection con = new SqlConnection(Utils.ConnectionString))
             {
-                string query = "INSERT INTO [User] (email, password, name, vegetarian, age, country) " +
-                               "VALUES (@Email, @Password, @Name, @Vegetarian, @Age, @Country)";
+                string query = "INSERT INTO [User] (email, password, name, veggie, age, country) " +
+                               "VALUES (@Email, @Password, @Name, @Veggie, @Age, @Country)";
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Email", user.Email);
                 cmd.Parameters.AddWithValue("@Password", user.Password);
-                cmd.Parameters.AddWithValue("@Vegetarian", user.Vegetarian);
+                cmd.Parameters.AddWithValue("@Veggie", user.Veggie);
                 cmd.Parameters.AddWithValue("@Age", user.Age);
                 cmd.Parameters.AddWithValue("@Country", user.Country);
                 cmd.Parameters.AddWithValue("@Name", user.Name);

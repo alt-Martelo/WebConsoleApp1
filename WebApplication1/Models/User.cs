@@ -7,7 +7,7 @@
         public string Email { get; set; }
         public string Password { get; set; }
         public string Name { get; set; }
-        public bool Vegetarian { get; set; }
+        public bool Veggie { get; set; }
         public string Country { get; set; } = "PT"; 
         public int Age { get; set; }
         public virtual IList<Recipe>? Recipes { get; } = default!;
